@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="claude">
+  <diagram name="Use Case Diagram" id="uc-diagram-3">
+    <mxGraphModel dx="1593" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=17;" value="Digital Art Commission &amp; Watermarking Portal" vertex="1">
+          <mxGeometry height="30" width="340" x="300" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="600" width="340" x="300" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="Client Buyer" vertex="1">
+          <mxGeometry height="90" width="40" x="80" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_artist" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;" value="Digital Artist" vertex="1">
+          <mxGeometry height="90" width="40" x="840" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_brief" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Submit Creative Brief" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_watermark" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Apply Watermark Overlay" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_submit" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Submit WIP Draft" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_revision" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Request Revision" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_upload" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Upload Final Source Files" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_download" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a1a1a;" value="Download Final Artwork" vertex="1">
+          <mxGeometry height="70" width="280" x="330" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="actor_client" style="endArrow=none;html=1;fontSize=11;" target="uc_brief">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="actor_client" style="endArrow=none;html=1;fontSize=11;" target="uc_revision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="actor_client" style="endArrow=none;html=1;fontSize=11;" target="uc_download">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="actor_artist" style="endArrow=none;html=1;fontSize=11;" target="uc_submit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="actor_artist" style="endArrow=none;html=1;fontSize=11;" target="uc_upload">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc1" edge="1" parent="1" source="uc_submit" style="endArrow=open;endFill=0;dashed=1;html=1;fontStyle=2;fontSize=11;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="uc_watermark" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext1" edge="1" parent="1" source="uc_revision" style="endArrow=open;endFill=0;dashed=1;html=1;fontStyle=2;fontSize=11;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="uc_submit" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1" edge="1" parent="1" source="uc_brief" style="endArrow=open;endFill=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="uc_watermark">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2" edge="1" parent="1" source="uc_revision" style="endArrow=open;endFill=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="uc_upload">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3" edge="1" parent="1" source="uc_upload" style="endArrow=open;endFill=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="uc_download">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
